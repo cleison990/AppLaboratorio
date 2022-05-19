@@ -4,7 +4,7 @@ import Logo from "../assets/Logo";
 
 
 
-export default () => {
+export default ({ navigation }) => {
     return(
         <SafeAreaView style={styles.container}>
             <View style={styles.logoContainer}>
@@ -14,16 +14,16 @@ export default () => {
            <View style={styles.loginContainer}>
             <View style={styles.login}>
                 <Text style={styles.text}>
-                    LOGIN
+                    SEJA BEM-VINDO(A)
                 </Text>
             </View>
                 <TextInput  
-                    placeholder={"Informe Seu Login"}
+                    placeholder={"Login"}
                     placeholderTextColor='#000000'
                     style={styles.loginInput}
                 />
                 <TextInput  
-                    placeholder={"Informe Sua Senha"}
+                    placeholder={"Senha"}
                     placeholderTextColor='#000000'
                     style={styles.loginInput}
                     secureTextEntry={true}
@@ -33,7 +33,10 @@ export default () => {
                         ENTRAR
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonLogin}>
+                <TouchableOpacity 
+                    style={styles.buttonLogin}
+                    onPress={() => navigation.navigate('Register')}
+                    >
                     <Text style={styles.text}>
                         CADASTRAR
                     </Text>
