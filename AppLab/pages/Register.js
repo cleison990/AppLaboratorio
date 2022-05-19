@@ -14,36 +14,48 @@ export default ({ navigation }) => {
            <View style={styles.loginContainer}>
             <View style={styles.login}>
                 <Text style={styles.text}>
-                    SEJA BEM-VINDO(A)
+                    FAÇA SEU CADASTRO
                 </Text>
             </View>
                 <TextInput  
-                    placeholder={"Login"}
+                    placeholder={"Informe seu nome"}
                     placeholderTextColor='#000000'
                     style={styles.loginInput}
                 />
                 <TextInput  
-                    placeholder={"Senha"}
+                    placeholder={"Informe seu login de acesso"}
                     placeholderTextColor='#000000'
                     style={styles.loginInput}
-                    secureTextEntry={true}
                 />
-                <TouchableOpacity 
-                    style={styles.buttonLogin}
-                    onPress={() => navigation.navigate('Agendamento')}
+                <TextInput  
+                    placeholder={"Informe sua senha"}
+                    placeholderTextColor='#000000'
+                    style={styles.loginInput}
+                />
+                <TextInput  
+                    placeholder={"Informe seu curso"}
+                    placeholderTextColor='#000000'
+                    style={styles.loginInput}
+                />
+                <TextInput  
+                    placeholder={"Informe seu período"}
+                    placeholderTextColor='#000000'
+                    style={styles.loginInput}
+                />
+                <View style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.buttonLogin}
+                    onPress={() => navigation.navigate('Login')}
                 >
                     <Text style={styles.text}>
-                        ENTRAR
+                        CANCELAR
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity 
-                    style={styles.buttonLogin}
-                    onPress={() => navigation.navigate('Register')}
-                    >
+                <TouchableOpacity style={styles.buttonLogin}>
                     <Text style={styles.text}>
-                        CADASTRAR
+                        CONCLUIR
                     </Text>
                 </TouchableOpacity>
+                </View>
             </View> 
         </SafeAreaView>
     )
@@ -61,12 +73,13 @@ const styles = StyleSheet.creat=(
         logoContainer: {
             alignItems: 'center',
             marginLeft: 10,
+            marginTop: 150,
             marginBottom: 5,
         },
         loginContainer: {
             backgroundColor: '#E2DDDD',
             width: 300,
-            height: 300,
+            height: 440,
             borderRadius: 10,
             justifyContent: 'center',
             alignItems: 'center',
@@ -96,11 +109,16 @@ const styles = StyleSheet.creat=(
             marginTop: 10,
             marginBottom: 10,
         },
+        buttonContainer: {
+            flexDirection: 'row',
+        },
         buttonLogin: {
             backgroundColor: "#0D4B81",
             justifyContent: "center",
-            width: 200,
+            width: 120,
             height: 32,
+            marginLeft: 5,
+            marginRight: 5,
             borderRadius: 10,
             marginTop: 10,
         },

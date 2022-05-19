@@ -10,10 +10,10 @@ import Agendamento from './pages/Agendamento.js'
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function Tab() {
+function Tabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name={"Agendamento"} component={Agente}/>
+      <Tab.Screen name={"Agendamento"} component={Agendamento}/>
     </Tab.Navigator>
   )
 }
@@ -30,6 +30,7 @@ export default function App() {
         <Stack.Screen name="PreLoad" component={PreLoad}/>
         <Stack.Screen name="Login" component={Login}/>
         <Stack.Screen name="Register" component={Register}/>
+        <Stack.Screen name="Agendamento" component={Tabs}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
